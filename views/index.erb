@@ -1,0 +1,16 @@
+<h1>Favorite Places</h1>
+
+<p>Here are all your favorite places:</p>
+
+<ul>
+  <% @location.each() do |location| %>
+    <li><%= location.location() %></li>
+  <% end %>
+</ul>
+
+<form action="/favorite_places" method="post">
+  <label for="place">Enter your location:</label>
+  <input id="place" name="place" type="text">
+
+  <button type="submit">Add place!</button>
+</form>
